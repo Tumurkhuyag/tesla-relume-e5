@@ -90,20 +90,20 @@ img {
   overflow-wrap: anywhere;
 }
 
-/* Logo: 84x36 slot with the 70x36 mark offset as in the design. */
 .logo {
-  position: relative;
   display: block;
-  flex-shrink: 0;
-  width: 84px;
-  height: 36px;
-  overflow: hidden;
+  width: 156px;
+  max-width: 100%;
 }
 
 .logo img {
-  position: absolute;
-  top: 0;
-  left: 6.67px;
+  width: 100%;
+  height: auto;
+}
+
+/* Centres the wordmark on the first line of the neighbouring column titles. */
+.footer__column .logo {
+  margin-top: 4px;
 }
 
 /* Buttons: the design's strokes add no layout size, so padding is reduced by 1px. */
@@ -560,6 +560,7 @@ img {
 
   .navbar__links {
     order: 3;
+    gap: 16px;
     justify-content: space-between;
     width: 100%;
   }
